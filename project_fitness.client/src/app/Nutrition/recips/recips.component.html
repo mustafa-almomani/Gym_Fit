@@ -1,0 +1,16 @@
+
+
+<h2 class="heading">Discover Delicious Healthy Food and Sweet</h2>
+<section class="cards-wrapper">
+  <div class="card-grid-space" *ngFor="let item of RecipeArray">
+    <a class="card" [routerLink]="['/SupRecipe', item.recipeId]" [ngStyle]="{'background-image': 'url(' + 'https://localhost:7072/api/Recipe/getImages/' + item.recipeImage + ')'}">
+      <div>
+        <h1>{{item.recipeName}}</h1>
+        <p>Discover our delicious recipes that cater to every palate! From healthy meals to indulgent treats, our collection offers something for everyone. Whether you're looking for quick weeknight dinners or impressive desserts for special occasions, these recipes are designed to delight your taste buds and inspire your culinary adventures.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+

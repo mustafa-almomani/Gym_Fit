@@ -1,0 +1,36 @@
+<hr />
+<h2>Products</h2>
+<hr />
+<div class="container mt-2">
+
+  <div class="text-center mb-2">
+    <button class="btn btn-success" style="background-color: #e955fc;" routerLink="/Dashboard/addproduct">Add New Product</button>
+  </div>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Stock Quantity</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.productName }}</td>
+        <td><img src="https://localhost:7072{{product.image}}" style="height:30px; width:40px;" /></td>
+        <td>{{ product.price | currency }}</td>
+        <td>{{ product.stockQuantity }}</td>
+        <td>
+
+          <button class="btn btn-secondary me-2"  routerLink="/Dashboard/updateproduct/{{product.id}}">Edit</button>
+          <button class="btn btn-danger" (click)="deleteProduct(product.id)" [disabled]="!product.id">Delete</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+</div>

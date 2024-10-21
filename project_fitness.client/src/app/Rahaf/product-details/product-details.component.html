@@ -1,0 +1,127 @@
+<!--<div class="product-details-wrapper mt-5">
+  <div class="container">-->
+<!-- Breadcrumb Navigation -->
+<!--<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+    <li class="breadcrumb-item"><a [routerLink]="['/products']">Products</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ product.productName }}</li>
+  </ol>
+</nav>-->
+<!-- Product Details Card -->
+<!--<div class="card shadow-sm p-4">
+  <div class="row g-4">-->
+<!-- Product Image -->
+<!--<div class="col-md-4">
+  <div class="product-image">
+    <img *ngIf="product.image; else noImage" src="https://localhost:7072{{product.image}}" alt="{{ product.productName }}" class="img-fluid rounded">
+    <ng-template #noImage>
+      <img src="assets/images/no-image-available.png" alt="No image available" class="img-fluid rounded">-->
+ <!-- Placeholder image -->
+<!--</ng-template>
+  </div>
+</div>-->
+<!-- Product Information -->
+<!--<div class="col-md-8">
+  <div class="product-info">
+    <h1 class="display-6 text-secondary">{{ product.productName }}</h1>
+
+    <p class="product-description">{{ product.description }}</p>-->
+<!-- Product Pricing -->
+<!--<div class="product-pricing mb-3">
+  <strong class="h4 text-danger">${{ product.price | number: '1.2-2' }}</strong>
+  <span *ngIf="product.discount" class="badge bg-success ms-2">{{ product.discount }}% OFF</span>
+</div>-->
+<!-- Stock Information -->
+<!--<p class="stock-info">
+  <strong>Stock Quantity:</strong>
+  <input type="number" [(ngModel)]="cartItemObj.quantity" min="1" class="form-control d-inline-block w-auto" />
+  <span [ngClass]="{'text-success': product.stockQuantity > 0, 'text-danger': product.stockQuantity === 0}">
+    {{ product.stockQuantity > 0 ? product.stockQuantity + ' available' : 'Out of stock' }}
+  </span>
+</p>-->
+<!-- Add to Cart Button -->
+<!--<div class="action-buttons">
+              <button class="btn btn-primary btn-lg w-50" (click)="addToCart(product.id, product.price, product.productName, product.image)" [disabled]="product.stockQuantity === 0">
+                <i class="fas fa-cart-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+<!--<section class="dark">
+  <div class="container py-4">
+
+    <h1 class="h1 text-center recipe-header">Recipe Details</h1>
+
+    <article class="postcard dark blue d-flex">
+      <div class="postcard dark blue d-flex align-items-center mt-4 ms-4 ">
+        <a class="postcard__img_link">
+          <img class="postcard__img img-fluid rounded" style="height:100%;width:100%;" src="https://localhost:7072{{product.image}}" alt="{{ product.productName }}" />
+        </a>
+      </div>
+      <div class="recipe-details ms-4">
+        <h1 class="postcard__title blue recipe-title">{{ product.productName }} <strong class="preparation-time">${{ product.price | number: '1.2-2' }} </strong>  <span *ngIf="product.discount" class="badge bg-success ms-2">{{ product.discount }}% OFF</span></h1>
+        <ol class="preparation-steps">
+          <li class="step">{{ product.description }}</li>
+        </ol>
+        <hr class="divider" />
+
+
+        <hr class="divider" />
+        <p class="stock-info">
+          <strong>Stock Quantity:</strong>
+          <input type="number" [(ngModel)]="cartItemObj.quantity" min="1" class="form-control d-inline-block" style="width: 55px" />
+          <span [ngClass]="{'text-success': product.stockQuantity > 0, 'text-danger': product.stockQuantity === 0}">
+            {{ product.stockQuantity > 0 ? product.stockQuantity + ' available' : 'Out of stock' }}
+          </span>
+        </p>
+        <div class="action-buttons">
+          <button class="btn btn-primary btn-lg w-25" (click)="addToCart(product.id, product.price, product.productName, product.image)" [disabled]="product.stockQuantity === 0">
+            <i class="fas fa-cart-plus"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </article>
+
+
+  </div>
+</section>-->
+<!-- Breadcrumb -->
+<div class="breadcrumb-area">
+  <div class="container">
+    <h1>Products</h1>
+    <div class="breadcrumb-list">
+      <ul>
+        <li><a [routerLink]="['/']">Home</a></li>
+        <li>Products</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Product Details Section -->
+<div class="container product-details">
+  <div class="row">
+    <div class="col-md-6 product-image">
+      <img src="https://localhost:7072{{product.image}}" alt="{{ product.productName }}">
+    </div>
+    <div class="col-md-6 product-info">
+      <h2>{{ product.productName }}</h2>
+      <div class="product-price">
+        {{ product.price | number: '1.2-2' }} 
+      </div>
+      <div class="product-description">
+        {{ product.description }}
+      </div>
+      <div class="d-flex align-items-center">
+        <input type="number" class="form-control quantity-input" [(ngModel)]="cartItemObj.quantity" min="1">
+        <button class="btn w-25" style="background-color: #e955fc"  (click)="addToCart(product.id, product.price, product.productName, product.image)">ADD TO CART</button>
+        <!--<button class="btn btn-wishlist">♡</button>-->
+      </div>
+    </div>
+  </div>
+</div>

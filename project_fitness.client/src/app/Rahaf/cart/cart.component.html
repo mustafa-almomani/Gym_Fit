@@ -1,0 +1,116 @@
+<!--<div *ngIf="cartItems.length > 0; else emptyCart">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartItems">
+        <td><img class="postcard__img img-fluid rounded" style="width: 50px;" src="https://localhost:7072{{item.product.image}}" alt="{{ item.product.productName }}" /></td>
+        <td>{{ item.product.productName }}</td>
+        <td><button (click)="minusQ(item.productId, item.id)">-</button><input type="number" value="{{item.quantity}}" readonly  /><button (click)="incrimentQ(item.productId, item.id)">+</button></td>
+        <td>${{ item.price * item.quantity | number: '1.2-2' }}</td>
+        <td><button class="btn btn-danger" (click)="remove(item.productId, item.id)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Total: ${{ getCartTotal() | number: '1.2-2' }}</h3>
+  <button class="btn btn-primary" (click)="goToPayment()">Proceed to Payment</button>-->
+<!--<button class="btn btn-primary" (click)="PayPalCheck()">PayPal</button>-->
+<!--</div>
+
+<ng-template #emptyCart>
+  <div class=" text-center" style="height: 80vh;">
+    <p>Your cart is empty.</p>
+  </div>
+</ng-template>-->
+
+<div class="ltn__breadcrumb-area ltn__breadcrumb-area-4 ltn__breadcrumb-color-white---">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ltn__breadcrumb-inner text-center">
+          <h1 class="ltn__page-title">Cart</h1>
+          <div class="ltn__breadcrumb-list">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li>Cart</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-8">
+      <table class="table table-bordered cart-table">
+        <thead>
+          <tr>
+            <th>Remove</th>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let item of cartItems">
+            <td><button class="btn btn-danger btn-sm" (click)="remove(item.productId, item.id)">x</button></td>
+            <td><img src="https://localhost:7072{{item.product.image}}" alt="{{ item.product.productName }}" class="img-fluid"></td>
+            <td>{{ item.product.productName }}</td>
+            <td>{{item.price}} JOD</td>
+            <td>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-secondary btn-sm" (click)="minusQ(item.productId, item.id)">-</button>
+                </div>
+                <input type="number" class="form-control text-center" value="{{item.quantity}}" style="width: 50px;" readonly>
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary btn-sm" (click)="incrimentQ(item.productId, item.id)">+</button>
+                </div>
+              </div>
+            </td>
+            <td>{{ item.price * item.quantity | number: '1.2-2' }} JOD</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <ng-template #emptyCart>
+      <div class=" text-center" style="height: 80vh;">
+        <p>Your cart is empty.</p>
+      </div>
+    </ng-template>
+    <div class="col-lg-4 mb-3">
+      <div class="cart-total-box">
+        <h4>Cart Totals</h4>
+        <table class="table">
+          <tr>
+            <th>Cart Subtotal</th>
+            <td>{{ getCartTotal() | number: '1.2-2' }} JOD</td>
+          </tr>
+          <tr>
+            <th>Shipping and Handling</th>
+            <td>5 JOD</td>
+          </tr>
+          <tr class="order-total">
+            <th>Order Total</th>
+            <td>{{ getCartTotalPLUS5() | number: '1.2-2' }} JOD</td>
+          </tr>
+        </table>
+        <button class="btn w-50" style="background-color: #e955fc" (click)="goToPayment()">Proceed to checkout</button>
+      </div>
+    </div>
+  </div>
+</div>

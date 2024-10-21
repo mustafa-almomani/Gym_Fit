@@ -1,0 +1,26 @@
+<section class="dark">
+  <div class="container py-4">
+    <h1 class="h1 text-center" id="pageHeaderTitle">All Tips</h1>
+    <p class="h1 text-center" id="pageHeaderTitle">The most important tips to maintain your health</p>
+
+    <article class="postcard dark blue" *ngFor="let item of TipsArray">
+      <div class="postcard__content d-flex align-items-start">
+        <div class="postcard__img_link">
+          <img class="postcard__img"
+               [src]="'https://localhost:7072/api/Recipe/getImages/' + item.tipsImage"
+               [alt]="item.tipsName" />
+        </div>
+
+        <div class="postcard__text ml-3">
+          <h2 class="postcard__title blue">
+            {{item.tipsName}}
+          </h2>
+          <hr />
+          <p class="tipsDescription">
+            <strong>Description:</strong> {{item.tipsDescription}}
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

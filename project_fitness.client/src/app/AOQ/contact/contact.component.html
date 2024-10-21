@@ -1,0 +1,292 @@
+	<!-- MAIN SECTIONS START FROM HERE -->
+<main class="main_wrapper">
+
+	<!-- BREADCRUMBS SECTION START FROM HERE -->
+	<div class="default-padding">
+		<div class="breadcrumbs-section">
+			<div class="container">
+				<div class="breadcrumbs-title title text-lg-start text-center pb-3">contact us</div>
+				<div class="breadcrumbs-block mx-lg-0 mx-auto">
+					<a routerLink="" class="item">home</a>
+					<span class="item active">contact us</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- BREADCRUMBS SECTION END'S FROM HERE -->
+	<!-- CONTACT US SECTION START FROM HERE -->
+	<div class="default-padding">
+		<div class="contact-section form-section wow fadeIn">
+			<div class="container">
+				<div class="contact-wrapper">
+					<div class="row justify-content-lg-start justify-content-center">
+						<div class="col-lg-6 col-sm-10">
+							<div class="fill-up-form">
+								<div class="title text-center">Write Us</div>
+
+
+								<form class="form" #CreateContact="ngForm" (ngSubmit)="AddNewMessage(CreateContact.value)">
+									<div class="row">
+
+										<div class="col-12">
+											<div class="form-group">
+												<input type="text" name="name" class="user-input" placeholder="Your Name" required="" ngModel>
+											</div>
+										</div>
+
+										<div class="col-12">
+											<div class="form-group">
+												<input type="email" name="email" class="user-input" placeholder="E-MAIL" required="" ngModel>
+											</div>
+										</div>
+
+										<div class="col-12">
+											<div class="form-group">
+												<input type="text" name="phoneNumber" class="user-input" placeholder="PHONE NO." required="" ngModel>
+											</div>
+										</div>
+
+
+
+										<div class="col-12">
+											<div class="form-group">
+												<textarea type="text" name="message" class="user-input" placeholder="WRITE YOUR CONSERN" rows="6" required="" ngModel></textarea>
+											</div>
+										</div>
+
+									</div>
+									<button type="submit" class="btn_wrapper w-100 justify-content-center">CONTACT US</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CONTACT US SECTION END'S FROM HERE -->
+
+	<!-- CONTACT US SECTION START FROM HERE -->
+	<div class="contact-section details-section default-padding">
+		<div class="container">
+			<div class="contact-dtls default-padding">
+				<div class="row justify-content-center gy-lg-0 gy-4">
+					<div class="col-xl-4 col-lg-6 col-sm-10 wow fadeInLeft">
+						<div class="contact-block text-sm-start text-center">
+							<div class="icon mx-sm-0 mx-auto image-wrapper"><img loading="lazy" src="assets/images/icon/call.svg" alt="call_icon"></div>
+							<span>Call us</span>
+							<div class="d-sm-flex align-items-center justify-content-between mb-2">
+								<p>Business Inquiry :</p>
+								<a href="skype:+12567852555?call">+1 256 785 2555</a>
+							</div>
+							<div class="d-sm-flex align-items-center justify-content-between">
+								<p>Customer Support :</p>
+								<a href="skype:+12567852551?call">+1 256 785 2551</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-sm-10 wow fadeInRight">
+						<div class="contact-block text-sm-start text-center emailBlock">
+							<div class="icon mx-sm-0 mx-auto image-wrapper"><img loading="lazy" src="assets/images/icon/mail.svg" alt="mail_icon"></div>
+							<span>E-mail</span>
+							<div class="d-sm-flex align-items-center justify-content-between mb-2">
+								<p>Business Inquiry :</p>
+								<a href="{{mail}}">Click to contact with BI</a>
+							</div>
+							<div class="d-sm-flex align-items-center justify-content-between">
+								<p>Customer Support :</p>
+								<a href="{{mail}}">Click to contact with CS</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CONTACT US SECTION END'S FROM HERE -->
+
+</main>
+<!-- MAIN SECTIONS END'S FROM HERE -->
+
+
+
+
+
+
+
+<script src="assets/vendors/jquery/jquery.min.js"></script> <!-- JQUERY -->
+<script src="assets/vendors/bootstrap/js/bootstrap.js"></script> <!-- BOOTSTRAP JS -->
+<script src="assets/vendors/swiper/js/swiper-bundle.min.js"></script> <!-- SWIPER JS -->
+<script src="assets/vendors/animation/js/animation.js"></script> <!-- ANIMATION JS -->
+<script src="assets/js/main.js"></script> <!-- MAIN JS -->
+<!-- FLOATING IMG JS -->
+<script>
+		/* ========= ABOUT US FLOATING IMAGES ========= */
+		/* IMG 1 */
+		const about_img1 = document.getElementById('about_img1');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			about_img1.style.transform = `translate(${offsetX * 10}px, ${offsetY * 10}px)`;
+		});
+		/* IMG 2 */
+		const about_img2 = document.getElementById('about_img2');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			about_img2.style.transform = `translate(calc(-50% + ${offsetX * -10}px), calc(-50% + ${offsetY * -10}px))`;
+		});
+		/* ========= ABOUT US FLOATING IMAGES ========= */
+
+
+		/* ========= INSTAGRAM FLOATING IMAGES ========= */
+		/* Img 1 */
+		const floatingImage1 = document.getElementById('floatingImage1');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage1.style.transform = `translate(${offsetX * 10}px, ${offsetY * 10}px)`;
+		});
+
+		/* Img 2 */
+		const floatingImage2 = document.getElementById('floatingImage2');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage2.style.transform = `translate(${offsetX * -10}px, ${offsetY * -10}px)`;
+		});
+
+		/* Img 3 */
+		const floatingImage3 = document.getElementById('floatingImage3');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage3.style.transform = `translate(${offsetX * -10}px, ${offsetY * -10}px)`;
+		});
+
+		/* Img 4 */
+		const floatingImage4 = document.getElementById('floatingImage4');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage4.style.transform = `translate(${offsetX * 5}px, ${offsetY * 5}px)`;
+		});
+
+		/* Img 5 */
+		const floatingImage5 = document.getElementById('floatingImage5');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage5.style.transform = `translate(${offsetX * 5}px, ${offsetY * 5}px)`;
+		});
+
+		/* Img 6 */
+		const floatingImage6 = document.getElementById('floatingImage6');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage6.style.transform = `translate(${offsetX * -5}px, ${offsetY * -5}px)`;
+		});
+
+		/* Img 7 */
+		const floatingImage7 = document.getElementById('floatingImage7');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage7.style.transform = `translate(${offsetX * 20}px, ${offsetY * 20}px)`;
+		});
+
+		/* Img 8 */
+		const floatingImage8 = document.getElementById('floatingImage8');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage8.style.transform = `translate(${offsetX * 15}px, ${offsetY * 15}px)`;
+		});
+
+		/* Img 9 */
+		const floatingImage9 = document.getElementById('floatingImage9');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage9.style.transform = `translate(${offsetX * -20}px, ${offsetY * -20}px)`;
+		});
+		/* ========= INSTAGRAM FLOATING IMAGES ========= */
+</script>

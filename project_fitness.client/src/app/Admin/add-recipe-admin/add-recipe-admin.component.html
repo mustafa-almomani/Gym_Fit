@@ -1,0 +1,25 @@
+<form #AddRecipetype="ngForm" (ngSubmit)="AddNewRecipeType(AddRecipetype.value)" style="max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: gainsboro">
+  <input type="hidden" name="__RequestVerificationToken" value="TOKEN_VALUE">
+
+  <h2 style="text-align: center; margin-bottom: 20px;">Add Recipes</h2>
+
+  <div class="form-container">
+    <div class="form-group" style="margin-bottom: 15px;">
+      <label for="Title" class="form-label" style="display: block; font-weight: bold; margin-bottom: 5px;">Recipe Name</label>
+      <input type="text" id="Title" name="recipeName" class="form-control" required="required" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" ngModel>
+      <span class="text-danger" id="Title-error" style="color: red; font-size: 0.875em;"></span>
+    </div>
+
+
+   
+    <div class="form-group" style="margin-bottom: 15px;">
+      <label for="Image" class="form-label" style="display: block; font-weight: bold; margin-bottom: 5px;">Main Image</label>
+      <input type="file" id="Image" name="recipeImage" class="form-control" required="required" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" ngModel (change)="changeImage($event)">
+      <span class="text-danger" id="Image-error" style="color: red; font-size: 0.875em;"></span>
+    </div>
+
+    <div class="form-group" style="text-align: center;">
+      <button type="submit" class="btn btn-primary w-25" style="background-color: #e21dfb; border: none; border-radius: 5px; color: white; font-size: 1em; cursor: pointer; ">Submit</button>
+    </div>
+  </div>
+</form>

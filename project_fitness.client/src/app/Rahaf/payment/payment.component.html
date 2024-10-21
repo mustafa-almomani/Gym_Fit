@@ -1,0 +1,77 @@
+<div class="checkout-container">
+  <h1 class="checkout-title">Checkout</h1>
+
+  <div class="checkout-wrapper">
+    <!-- Shipping Details -->
+    <div class="shipping-details card">
+      <h2 class="section-title">Shipping Details</h2>
+      <form class="shipping-form">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" class="input-field" required value="{{userDATA.userName}}">
+        </div>
+        <div class="form-group-test">
+          <div style="width: 49%; margin-right:17px">
+            <label for="postalcode">Email Addresses</label>
+            <input type="text" id="postalcode" class="input-field-test" required value="{{userDATA.userEmail}}">
+          </div>
+          <div style="width: 49%">
+            <label for="country">Phone Number</label>
+            <input type="number" id="country" class="input-field-test" required value="{{userDATA.userPhone}}">
+          </div>
+        </div>
+        <div class="form-group-test">
+          <div style="width: 49%; margin-right:17px">
+            <label for="city">City</label>
+            <input type="text" id="city" class="input-field-test" required>
+          </div>
+          <div style="width: 49%">
+            <label for="address">Address</label>
+            <input type="text" id="address" class="input-field-test" required value="{{userDATA.userAddress}}">
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Order Summary (next to Shipping Details) -->
+    <div class="order-summary card">
+      <h2 class="section-title">Order Summary</h2>
+      <ul class="summary-list" *ngFor="let item of cartItems">
+        <li class="summary-item">
+          {{ item.product.productName }} - ${{item.price}} x{{item.quantity}}
+        </li>
+      </ul>
+      <div class="total">
+        <span>SubTotal:</span>
+        <span class="total-price">{{ getCartTotal() | number: '1.2-2' }} JOD</span>
+      </div>
+      <div class="total">
+        <span>Shipping and Handling:</span>
+        <span class="total-price">5 JOD</span>
+      </div>
+      <div class="total">
+        <span>Total:</span>
+        <span class="total-price">{{ getCartTotalPLUS5() | number: '1.2-2' }} JOD</span>
+      </div>
+      <div class="payment-info">
+        <h2 class="section-title">Payment Information</h2>
+        <form class="payment-form">
+          <div class="form-group">
+            <label for="payment-method">Select Payment Method</label>
+            <div class="payment-method-options">
+              <div class="payment-option">
+                <input type="radio" id="cod" name="payment" value="cash" [(ngModel)]="selectedPayment" required>
+                <label for="cod" class="lll">Cash on Delivery</label>
+              </div>
+              <div class="payment-option">
+                <input type="radio" id="paypal" name="payment" value="paypal" [(ngModel)]="selectedPayment">
+                <label for="paypal" class="lll">PayPal</label>
+              </div>
+            </div>
+          </div>
+        </form>
+        <button class="btn w-100" style="background-color: #e955fc" (click)="PayPalCheck()">Place Order</button>
+      </div>
+    </div>
+  </div>
+</div>

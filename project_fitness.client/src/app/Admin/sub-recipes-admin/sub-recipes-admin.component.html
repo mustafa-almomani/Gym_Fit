@@ -1,0 +1,41 @@
+<hr />
+<h2>SubRecipes</h2>
+<hr />
+<div class="form-group mb-3">
+  <input type="text" class="form-control" placeholder="Search by SubRecipe Name" [(ngModel)]="searchTerm" (ngModelChange)="filterRecipes()">
+</div>
+
+<button class="btn btn-success mb-0" [routerLink]="['/Dashboard/AddSubRecipeAdmin']">Add SubRecipe </button>
+
+<table class="table table-striped table-hover text-center" style="margin-top: 20px;">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Recipes Name</th>
+      <th scope="col">Preparation Steps</th>
+      <th scope="col">Preparation Time</th>
+      <th scope="col">Benefits</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of filteredRecipeArray" style="vertical-align: middle;">
+      <td>
+        <a class="postcard__img_link">
+          <img class="postcard__img"
+               [src]="'https://localhost:7072/api/Recipe/getImages/' + item.subRecipeImage"
+               [alt]="item.subRecipeImage"
+               style="width: 120px; height: 120px; border-radius: 8px; object-fit: cover;" />
+        </a>
+      </td>
+      <td>{{item.subRecipeName}}</td>
+      <td>{{item.preparationSteps}}</td>
+      <td>{{item.preparationTime}}</td>
+      <td>{{item.benefits}}</td>
+      <td>
+        <button class="btn btn-secondary me-2" style="width: 80px;" [routerLink]="['/Dashboard/UpdateSubRecipeAdmin', item.subRecipeId]">Edit</button>
+        <button class="btn btn-danger" style="width: 80px;" (click)="deletSSubrecipe(item.subRecipeId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

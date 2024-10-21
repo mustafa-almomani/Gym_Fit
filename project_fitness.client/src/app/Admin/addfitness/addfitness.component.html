@@ -1,0 +1,67 @@
+<form #addFitnessClass="ngForm" (ngSubmit)="addNewfitnessclass(addFitnessClass.value)" class="container" style="max-width: 80%; height: 92vh; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: gainsboro;">
+  <!-- CSRF Token (if needed) -->
+  <input type="hidden" name="__RequestVerificationToken" value="TOKEN_VALUE">
+
+  <h2 class="text-center mb-4">Add Fitness Class</h2>
+
+  <div class="row">
+    <!-- Fitness Class Name -->
+    <div class="col-md-6 mb-3">
+      <label for="Title" class="form-label">Fitness Class Name</label>
+      <input type="text" id="Title" name="fitnessClassesName" class="form-control" required="required" ngModel>
+    </div>
+
+    <!-- Fitness Class Location -->
+    <div class="col-md-6 mb-3">
+      <label for="Location" class="form-label">Fitness Class Location</label>
+      <input type="text" id="Location" name="fitnessClassesLocation" class="form-control" required="required" ngModel>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Fitness Class Price -->
+    <div class="col-md-6 mb-3">
+      <label for="Price" class="form-label">Fitness Class Price</label>
+      <input type="text" id="Price" name="price" class="form-control" required="required" ngModel>
+    </div>
+
+    <!-- Fitness Class Days -->
+    <div class="col-md-6 mb-3">
+      <label for="Days" class="form-label">Fitness Class Days</label>
+      <input type="text" id="Days" name="days" class="form-control" required="required" ngModel>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Fitness Class Start Time -->
+    <div class="col-md-6 mb-3">
+      <label for="StartTime" class="form-label">Fitness Class Start Time</label>
+      <input type="text" id="StartTime" name="startTime" class="form-control" required="required" ngModel>
+    </div>
+
+    <!-- Fitness Class End Time -->
+    <div class="col-md-6 mb-3">
+      <label for="EndTime" class="form-label">Fitness Class End Time</label>
+      <input type="text" id="EndTime" name="endTime" class="form-control" required="required" ngModel>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Fitness Class Image -->
+    <div class="col-md-6 mb-3">
+      <label for="Image" class="form-label">Fitness Class Image</label>
+      <input type="file" id="Image" name="fitnessClassesImage" class="form-control" required="required" (change)="changeImage($event)" ngModel>
+    </div>
+  </div>
+
+  <!-- Fitness Class Description -->
+  <div class="mb-3">
+    <label for="Description" class="form-label">Fitness Class Description</label>
+    <textarea id="Description" name="fitnessClassesDescription" class="form-control" rows="4" required="required" ngModel></textarea>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="text-center">
+    <button type="submit" class="btn w-25" style="background-color: #e955fc">Submit</button>
+  </div>
+</form>

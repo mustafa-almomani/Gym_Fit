@@ -1,0 +1,83 @@
+<head>
+  <!-- Other meta tags and links -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+
+</head>
+<header class="default-padding pt-0">
+
+  <div class="container">
+    <nav class="navbar navbar-expand-xxxl">
+      <!-- Logo -->
+      <a class="navbar-brand logo lh-0" routerLink="/">
+        <img src="assets/images/logo.svg" alt="Logo">
+      </a>
+
+      <div class="header_block">
+        <div class="MobileView lh-0 mb-sm-5 mb-4 d-flex align-items-center justify-content-end">
+          <a href="#" class="closeBtn d-flex align-items-center" (click)="onCloseClick($event)">
+            <p class="mb-0 pe-sm-3 pe-2">close</p>
+            <div class="close-icon d-flex align-items-center justify-content-center">
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <ul class="tabActive">
+          <li>
+            <a routerLink="/">Home</a>
+          </li>
+          <li class="dropdown">
+            <a href="#servicesMenu" class="dropdown-toggle" data-bs-toggle="collapse" aria-expanded="false">
+              Our Services
+            </a>
+            <ul id="servicesMenu" class="collapse list-unstyled">
+              <li class="bg-light"><a class="dropdown-item" routerLink="/shop">Shop</a></li>
+              <li class="bg-light"><a class="dropdown-item" routerLink="/NutritionPageOne">Nutrition</a></li>
+              <li class="bg-light"><a class="dropdown-item" routerLink="/services">Gym & class</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a routerLink="/About">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Contact">Contact Us</a>
+          </li>
+          <li *ngIf="!userId">
+            <a routerLink="/Login">Login</a>
+          </li>
+          <li *ngIf="userId">
+            <a (click)="logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+
+
+      
+      <div class="d-flex align-items-center gap-sm-4 gap-3">
+        <!-- Cart Icon -->
+        <div class="d-flex align-items-center gap-sm-4 gap-3">
+          <a routerLink="/cart" class="nav-link">
+            <i class="fas fa-shopping-cart"></i>
+
+          </a>
+          <!-- Shopping Bag Icon -->
+          <a routerLink="/shop" class="nav-link">
+            <i class="fas fa-shopping-bag"></i>
+          </a>
+          <a routerLink="/profile" class="nav-link" *ngIf="userId">
+            <i class="fas fa-user"></i>
+          </a>
+
+          <button class="hamburger lh-0">
+            <span>Menu</span>
+            <img src="assets/images/icon/toggle-icon.svg" alt="Icon" class="ps-2">
+          </button>
+        </div>
+        </div>
+</nav>
+  </div>
+</header>

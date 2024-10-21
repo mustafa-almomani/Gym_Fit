@@ -1,0 +1,30 @@
+<div class="title text-center mb-4">Top Product</div>
+<div id="products" class="col-lg-9 mx-auto">
+  <!-- Center the container -->
+  <div class="row">
+    <div *ngFor="let product of ProductArray" class="col-lg-3 col-md-6 mb-4">
+      <!-- Adjusted columns and margin -->
+      <div class="card product-card d-flex flex-column align-items-center">
+        <!-- Product Image -->
+        <div class="card-img">
+          <img src="https://localhost:7072{{ product.image }}" alt="{{ product.productname }}" class="img-fluid product-image">
+        </div>
+
+        <!-- Product Name -->
+        <div class="product-name mt-3 text-center">{{ product.productname }}</div>
+
+        <!-- Product Details -->
+        <div class="card-body text-center">
+          <div class="d-flex justify-content-center align-items-center price">
+            <div class="font-weight-bold">${{ product.price }}</div>
+          </div>
+          <!--<div class="product-actions mt-3">-->
+            <!-- Uncommented for action buttons -->
+            <!--<button (click)="addToCart()" class="btn add-to-cart">Add to Cart</button>
+            <button class="btn view-details" [routerLink]="['/ProductDetails', product.id]">View Details</button>
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

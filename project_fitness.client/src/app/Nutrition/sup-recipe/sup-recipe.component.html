@@ -1,0 +1,19 @@
+
+<section class="dark">
+  <div class="container py-4">
+    <h1 class="h1 text-center" id="pageHeaderTitle">All Healthy Recipe</h1>
+
+    <article class="postcard dark blue" *ngFor="let item of subRecipeData">
+      <a class="postcard__img_link" [routerLink]="['/SupRecipeDetails', item.subRecipeId]">
+        <img class="postcard__img"
+             [src]="'https://localhost:7072/api/Recipe/getImages/' + item.subRecipeImage"
+             [alt]="item.subRecipeName" />
+      </a>
+
+      <h1 class="postcard__title blue">
+        <a [routerLink]="['/SupRecipeDetails', item.subRecipeId]">{{item.subRecipeName}}</a>
+      </h1>
+
+    </article>
+  </div>
+</section>

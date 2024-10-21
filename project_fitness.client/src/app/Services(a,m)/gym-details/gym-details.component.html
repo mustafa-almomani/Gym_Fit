@@ -1,0 +1,140 @@
+
+
+    <article class="postcard dark blue" style="margin-left:1%;margin-right:1%">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="https://localhost:7072{{DetailsArray.gymImage}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text">
+        <h1 class="postcard__title blue"><a href="#">{{DetailsArray.gymName}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt me-2"></i>Work Time : {{DetailsArray.startTime}} AM - {{DetailsArray.endTime}} PM
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{DetailsArray.gymDescription}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item pt-2"><i class="fas fa-tag me-2"></i>The Location : {{DetailsArray.gymLocation}}</li>
+          <li class="tag__item pt-2"><i class="fas fa-clock me-2"></i>Monthly subscription : {{DetailsArray.price}} JD</li>
+         
+        </ul>
+      </div>
+    </article>
+ <!-- PRICING SECTION START FROM HERE -->
+ <div id="pricing">
+   <div class="pricing-section default-padding">
+     <div class="container">
+       <div class="content">
+         <div class="title text-center pb-sm-5 pb-4">Pricing Plan</div>
+         <div class="pricing-wrapper">
+           <div class="row">
+             <div class="col-4">
+               <div class="option-wrapper wow fadeInLeft">
+                 <ul class="nav nav-pills mb-sm-5 mb-4" id="pills-tab" role="tablist">
+                   <li class="nav-item" role="presentation">
+                     <p class="nav-link" id="pills-monthly-tab" data-bs-toggle="pill" data-bs-target="#pills-monthly"  role="tab" aria-controls="pills-monthly" aria-selected="true">
+                       monthly
+                     </p>
+                   </li>
+                  
+                 </ul>
+                 <div class="options">
+                   <ul>
+                     <li>Workouts</li>
+                     <li>Progress Tracking</li>
+                     <li>Nutritional Guidance</li>
+                     <li>One-on-One Coaching</li>
+                     <li>Bonus Workshops/Seminars</li>
+                   </ul>
+                   <span class="price">prices</span>
+                 </div>
+               </div>
+             </div>
+             <div class="col-8">
+               <div class="pricing-block wow fadeInRight">
+                 <div class="tab-content" id="pills-tabContent">
+                   <div class="tab-pane fade show active" id="pills-monthly" role="tabpanel" aria-labelledby="pills-monthly-tab" tabindex="0">
+                     <div class="row">
+                       <!--<div class="col-3">
+                         <div class="pricing-plan free">
+                           <div class="title mb-sm-5 mb-4">free</div>
+                           <ul>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon-2.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon-2.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon-2.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon-2.svg" width="30" height="30" alt="pricing-icon"></li>
+                           </ul>
+                           <div class="pricing">
+                             <span class="free">--</span>
+                             <p>Lifetime Free</p>
+                           </div>
+                           <a href="#" class="btn_wrapper mt-2 mx-auto">sign up</a>
+                         </div>
+                       </div>-->
+                       <div class="col-4">
+                         <div class="pricing-plan basic">
+                           <div class="title mb-sm-5 mb-4">Basic</div>
+                           <ul>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon-2.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon-2.svg" width="30" height="30" alt="pricing-icon"></li>
+                           </ul>
+                           <div class="pricing">
+                             <span>{{DetailsArray.price}} JOD</span>
+                             <p>For 1 Month</p>
+                           </div>
+                           <a href="javascript:void(0)" class="btn_wrapper mt-2 mx-auto" (click)="addsubscribtion(DetailsArray.price, 1,DetailsArray.gymId)">Subscription</a>
+                         </div>
+                       </div>
+                       <div class="col-4">
+                         <div class="pricing-plan pro">
+                           <div class="title mb-sm-5 mb-4">pro</div>
+                           <ul>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon-2.svg" width="30" height="30" alt="pricing-icon"></li>
+                           </ul>
+                           <div class="pricing">
+                             <span>{{(DetailsArray.price*3)-(DetailsArray.price*3*0.2)}} JOD</span>
+                             <p>For 3 Month with 20% Discount</p>
+                           </div>
+                           <a href="javascript:void(0)" class="btn_wrapper mt-2 mx-auto" (click)="addsubscribtion((DetailsArray.price * 3) - (DetailsArray.price * 3 * 0.2), 3,DetailsArray.gymId)">Subscription</a>
+                         </div>
+                       </div>
+                       <div class="col-4">
+                         <div class="pricing-plan ultimate">
+                           <div class="title mb-sm-5 mb-4">ULTIMATE</div>
+                           <ul>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                             <li><img loading="lazy" src="assets/images/icon/pricing-icon.svg" width="30" height="30" alt="pricing-icon"></li>
+                           </ul>
+                           <div class="pricing">
+                             <span>{{(DetailsArray.price*6)-(DetailsArray.price*6*0.3)}} JOD</span>
+                             <p>For 6 Month with 30% Discount</p>
+                           </div>
+                           <a href="javascript:void(0)" class="btn_wrapper mt-2 mx-auto" (click)="addsubscribtion((DetailsArray.price * 6) - (DetailsArray.price * 6 * 0.3), 6,DetailsArray.gymId)">Subscription</a>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+       
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- PRICING SECTION END'S FROM HERE -->
+
+

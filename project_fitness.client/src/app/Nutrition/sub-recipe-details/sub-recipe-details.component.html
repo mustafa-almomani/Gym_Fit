@@ -1,0 +1,29 @@
+
+
+<section class="dark">
+  <div class="container py-4">
+    <h1 class="h1 text-center recipe-header">Recipe Details</h1>
+
+    <article class="postcard dark blue d-flex align-items-start">
+      <div class="postcard__img_link">
+        <img class="postcard__img"
+             [src]="'https://localhost:7072/api/Recipe/getImages/' + DetailsArray.subRecipeImage"
+             [alt]="DetailsArray.subRecipeName" />
+      </div>
+      <div class="recipe-details">
+        <h1 class="postcard__title blue recipe-title">{{DetailsArray.subRecipeName}}</h1>
+        <strong class="preparation-time">Preparation Time: {{DetailsArray.preparationTime}}</strong>
+        <hr class="divider" />
+
+        <h2 class="section-title">Preparation Steps</h2>
+        <ol class="preparation-steps">
+          <li class="step">{{DetailsArray.preparationSteps}}</li>
+        </ol>
+        <hr class="divider" />
+
+        <h2 class="section-title">Benefits</h2>
+        <p class="step">{{DetailsArray.benefits}}</p>
+      </div>
+    </article>
+  </div>
+</section>

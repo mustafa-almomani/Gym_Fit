@@ -1,0 +1,67 @@
+<div class="container" style="max-width: 80%; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: gainsboro;">
+  <hr />
+  <h2 class="text-center mb-4">Manage Orders</h2>
+  <hr />
+
+  <!-- Orders Table -->
+  <div class="table-responsive">
+    <table class="table table-hover mt-5">
+      <thead class="table-light">
+        <tr>
+          <th>Customer Name</th>
+          <th>Quantity</th>
+          <th>Total Amount</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.customerName }}</td> <!-- Update to 'user' -->
+          <td>{{ order.quantity }}</td>
+          <td>{{ order.totalAmount | currency }}</td> <!-- Update to 'totalamount' -->
+          <td>{{ order.status }}</td>
+          <td>
+            <button class="btn btn-info me-2" routerLink="/Dashboard/orderitem/{{order.id}}">More Information</button>
+            <button class="btn btn-primary me-2" (click)="editOrder(order.id)">Edit</button>
+            <!--<button class="btn btn-danger" (click)="deleteOrder(order.id)">Delete</button>-->
+          </td>
+
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- No Orders Message (optional if orders array is empty) -->
+  <ng-template #noOrders>
+    <div class="alert alert-warning text-center">
+      No orders found. Please add a new order.
+    </div>
+  </ng-template>
+
+</div>
+<!-- Button to trigger the modal (already in your table row with 'showInfo()') -->
+<!-- Modal Structure -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Customer Name:</strong> {{ selectedOrder?.user }}</p>
+        <p><strong>Product:</strong> {{ selectedOrder?.productname }}</p>
+        <p><strong>Quantity:</strong> {{ selectedOrder?.quantity }}</p>
+        <p><strong>Total Amount:</strong> {{ selectedOrder?.totalamount | currency }}</p>
+        <p><strong>Status:</strong> {{ selectedOrder?.status }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

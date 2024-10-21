@@ -1,0 +1,52 @@
+.privacy-policy-container {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.header-section {
+  background-color: #ff5722;
+  color: white;
+  padding: 60px 0;
+}
+
+  .header-section h1 {
+    font-size: 48px;
+  }
+
+  .header-section p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+section {
+  padding: 40px 0;
+}
+
+h2 {
+  font-size: 28px;
+  color: #ff5722;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+  ul li {
+    margin-bottom: 10px;
+  }
+
+a {
+  color: #ff5722;
+  text-decoration: none;
+}
+
+  a:hover {
+    text-decoration: underline;
+  }

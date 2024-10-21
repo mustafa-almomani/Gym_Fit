@@ -1,0 +1,22 @@
+<p class="TitleToTestimonial text-center">Our Happy Customer Testimonial</p>
+
+<div class="container align-items-center">
+  <div class="row justify-content-center">
+    <!-- تعديل هنا لتوسيط الأعمدة -->
+    <div class="col-md-3 d-flex justify-content-center mb-4" *ngFor="let Testimonial of TestimonialArray">
+      <div class="card">
+        <div class="face front-face">
+          <img src="assets/images/logo.svg" alt="" class="profile">
+          <div class="pt-3 text-uppercase name">
+            {{Testimonial.username}}
+          </div>
+        </div>
+        <div class="face back-face">
+          <div class="testimonial">
+            {{Testimonial.messege}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

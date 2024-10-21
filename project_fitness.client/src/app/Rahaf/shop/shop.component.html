@@ -1,0 +1,66 @@
+<div class="container shop-page">
+  <!-- Shop Header Section -->
+  <div class="container shop-page">
+    <!-- Shop Header Section -->
+    <div class="shop-header text-center py-5">
+      <h1 class="shop-title">Welcome to Our Shop</h1>
+      <p class="shop-subtitle">Browse our wide selection of products and find what you need!</p>
+    </div>
+
+
+    <div class="row">
+      <!-- Filters Section -->
+      <div id="filterbar" class="col-lg-3">
+        <div class="box border-bottom">
+          <h5 class="filter-heading">Categories</h5>
+          <ul class="category-list">
+            <li *ngFor="let category of categories">
+              <a (click)="selectedCategory = category.id; filterProducts()" class="category-link">
+                {{ category.categoryName }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="box border-bottom">
+          <h5 class="filter-heading">Filter by Price</h5>
+          <label for="minPrice">Min Price: ${{ minPrice }}</label>
+          <input type="range" id="minPrice" min="0" max="1000" [(ngModel)]="minPrice" (input)="filterProducts()" class="range-input">
+          <label for="maxPrice">Max Price: ${{ maxPrice }}</label>
+          <input type="range" id="maxPrice" min="0" max="1000" [(ngModel)]="maxPrice" (input)="filterProducts()" class="range-input">
+        </div>
+
+        <div class="box border-bottom">
+          <button class="btn btn-reset btn-block mt-2" (click)="resetFilters()">Reset Filters</button>
+        </div>
+      </div>
+
+      <!-- Products Section -->
+      <div id="products" class="col-lg-9">
+        <div class="row mx-0">
+          <div *ngFor="let product of filteredProducts" class="col-lg-4 col-md-6">
+            <div class="card product-card d-flex flex-column align-items-center">
+              <!-- Product Image -->
+              <div class="card-img">
+                <img src="https://localhost:7072{{product.image}}" alt="{{ product.productName }}" class="img-fluid product-image">
+              </div>
+
+              <!-- Product Name -->
+              <div class="product-name mt-3">{{ product.productName }}</div>
+
+              <!-- Product Details -->
+              <div class="card-body text-center">
+                <div class="d-flex justify-content-center align-items-center price">
+                  <div class="font-weight-bold">${{ product.price }}</div>
+                </div>
+                <div class="product-actions mt-3">
+                  <button class="btn_wrapper" (click)="addToCart(product.id, product.price, product.productName, product.image)">Add to Cart</button>
+                  <button class="btn_wrapper" [routerLink]="['/ProductDetails', product.id]">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

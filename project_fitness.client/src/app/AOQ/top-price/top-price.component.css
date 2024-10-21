@@ -1,0 +1,240 @@
+
+.shop-page {
+  padding: 20px;
+}
+
+.shop-header {
+  margin-bottom: 20px;
+}
+
+.category-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+  .category-list li {
+    margin-bottom: 10px;
+  }
+
+    .category-list li a {
+      color: #4a47a3;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+      .category-list li a:hover {
+        color: #6a63ff;
+        text-decoration: underline;
+      }
+
+.price-range-slider {
+  margin-top: 20px;
+}
+
+.range-input {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.shop-page {
+  padding: 20px;
+}
+
+.shop-header {
+  margin-bottom: 20px;
+}
+
+.category-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+  .category-list li {
+    margin-bottom: 10px;
+  }
+
+    .category-list li a {
+      color: #4a47a3;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+      .category-list li a:hover {
+        color: #6a63ff;
+        text-decoration: underline;
+      }
+
+.price-range-slider {
+  margin-top: 20px;
+}
+
+.range-input {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.product-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-actions {
+  margin-top: 15px;
+}
+
+.btn-reset {
+  background-color: #6b63ff;
+  color: white;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.product-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-actions {
+  margin-top: 15px;
+}
+
+.btn-reset {
+  background-color: #6b63ff;
+  color: white;
+}
+
+/* General card styling */
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+.product-image {
+  border-radius: 12px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #333;
+}
+
+.price {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.card-body {
+  padding: 20px 0;
+}
+
+.btn[_ngcontent-ng-c1289249718] {
+  width: 45%;
+  font-size: 9px;
+}
+
+.btn_wrapper {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  width: max-content;
+  background: linear-gradient(180deg, rgb(5, 246, 249) -80%, rgb(249, 7, 252) 100%);
+  background-size: 100% 100%;
+  font-family: "Zen Dots", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  font-size: 12px; /* Reduced font size */
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px 10px; /* Reduced padding */
+  border-radius: 8px; /* Slightly smaller border radius */
+  box-shadow: 0 3px 15px 0 rgba(109, 141, 173, 0.55); /* Reduced shadow size */
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 5px;
+}
+
+  .btn_wrapper:hover {
+    box-shadow: 0 5px 20px 0 rgba(109, 141, 173, 0.75); /* Reduced hover shadow */
+    transform: translateY(-2px);
+  }
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+  .btn-secondary:hover {
+    background-color: #ff23da;
+    border-color: #ff23da;
+  }
+
+/* Spacing for buttons */
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.range-input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .product-actions .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .product-actions {
+    flex-direction: column;
+  }
+}
+
+
+.price {
+  font-size: 1.2rem;
+  color: #4a47a3;
+}

@@ -1,0 +1,31 @@
+<div class="categories-wrapper">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let category of categories">
+      <div class="custom-card-wrapper">
+        <div class="custom-card">
+          <div class="card-header">
+            <div *ngIf="category.image; else noImage" class="card-image">
+              <img [src]="category.image" alt="{{ category.categoryName }}" class="img-fluid">
+            </div>
+            <ng-template #noImage>
+              <div class="placeholder-image">
+                <img src="assets/images/placeholder.jpg" alt="No Image Available" class="img-fluid">
+              </div>
+            </ng-template>
+          </div>
+
+          <div class="card-body">
+            <h6 class="category-name">{{ category.categoryName }}</h6>
+            <p class="description">{{ category.description || 'No description available.' }}</p>
+          </div>
+
+          <div class="card-footer">
+            <a [routerLink]="['/Product', category.id]" class="btn btn-primary custom-btn">
+              View Products
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

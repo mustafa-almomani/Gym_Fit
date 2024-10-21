@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ENDURANCE</title>
+	<base href="/">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<!-- Thankyou page Links -->
+	<link href='https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/default_thank_you.css">
+	
+	<!-- PAGE TITLE START HERE -->
+	<title>ENDURANCE</title>
+	<!-- PAGE TITLE END'S HERE -->
+	<!-- META TAG START HERE -->
+	<meta charset="UTF-8">
+	<meta name="title" content="ENDURANCE"> <!-- ADD THEME TITLE HERE -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
+	<meta name="format-detection" content="telephone=no">
+	<meta name=theme-color content="#FFFFFF"> <!-- ADD THEME COLOR HERE -->
+	<meta name="description"
+				content="You are welcome to visit our center where every person is treated with high attention">
+	<!-- ADD THEME DESCRIPTION HERE -->
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="theme_url"> <!-- ADD THEME URL HERE -->
+	<meta property="og:title" content="ENDURANCE"> <!-- ADD THEME TITLE HERE -->
+	<meta property="og:description"
+				content="You are welcome to visit our center where every person is treated with high attention">
+	<!-- ADD THEME DESCRIPTION HERE -->
+	<meta property="og:image" content="assets/images/thumbnail.webp">
+	<!-- ADD THEME TITLE HERE -->
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="theme_url"> <!-- ADD THEME URL HERE -->
+	<meta property="twitter:title" content="ENDURANCE"> <!-- ADD THEME TITLE HERE -->
+	<meta property="twitter:description"
+				content="You are welcome to visit our center where every person is treated with high attention">
+	<!-- ADD THEME DESCRIPTION HERE -->
+	<meta property="twitter:image" content="assets/images/thumbnail.webp"> <!-- ADD THUMBNAIL PATH HERE -->
+	<!-- META TAG END'S HERE -->
+	<!-- FAVICON -->
+	<link href="assets/images/favicon.svg" rel="shortcut icon" type="image/x-icon">
+	<link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/vendors/swiper/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="assets/vendors/animation/css/animation.css">
+	<link rel="preload stylesheet" as="style" type="text/css" href="assets/css/app.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+	<app-root></app-root>
+
+
+
+	<!-- thank you page script -->
+	<script src="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/jquery-1.9.1.min.js"></script>
+	<script src="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/html5shiv.js"></script>
+
+
+
+
+	<script src="assets/vendors/jquery/jquery.min.js"></script> <!-- JQUERY -->
+	<script src="assets/vendors/bootstrap/js/bootstrap.js"></script> <!-- BOOTSTRAP JS -->
+	<script src="assets/vendors/swiper/js/swiper-bundle.min.js"></script> <!-- SWIPER JS -->
+	<script src="assets/vendors/animation/js/animation.js"></script> <!-- ANIMATION JS -->
+	<script src="assets/js/main.js"></script> <!-- MAIN JS -->
+	<!-- FLOATING IMG JS -->
+	<!--<script>
+		/* ========= ABOUT US FLOATING IMAGES ========= */
+		/* IMG 1 */
+		const about_img1 = document.getElementById('about_img1');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			about_img1.style.transform = `translate(${offsetX * 10}px, ${offsetY * 10}px)`;
+		});
+		/* IMG 2 */
+		const about_img2 = document.getElementById('about_img2');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			about_img2.style.transform = `translate(calc(-50% + ${offsetX * -10}px), calc(-50% + ${offsetY * -10}px))`;
+		});
+		/* ========= ABOUT US FLOATING IMAGES ========= */
+
+
+		/* ========= INSTAGRAM FLOATING IMAGES ========= */
+		/* Img 1 */
+		const floatingImage1 = document.getElementById('floatingImage1');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage1.style.transform = `translate(${offsetX * 10}px, ${offsetY * 10}px)`;
+		});
+
+		/* Img 2 */
+		const floatingImage2 = document.getElementById('floatingImage2');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage2.style.transform = `translate(${offsetX * -10}px, ${offsetY * -10}px)`;
+		});
+
+		/* Img 3 */
+		const floatingImage3 = document.getElementById('floatingImage3');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage3.style.transform = `translate(${offsetX * -10}px, ${offsetY * -10}px)`;
+		});
+
+		/* Img 4 */
+		const floatingImage4 = document.getElementById('floatingImage4');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage4.style.transform = `translate(${offsetX * 5}px, ${offsetY * 5}px)`;
+		});
+
+		/* Img 5 */
+		const floatingImage5 = document.getElementById('floatingImage5');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage5.style.transform = `translate(${offsetX * 5}px, ${offsetY * 5}px)`;
+		});
+
+		/* Img 6 */
+		const floatingImage6 = document.getElementById('floatingImage6');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage6.style.transform = `translate(${offsetX * -5}px, ${offsetY * -5}px)`;
+		});
+
+		/* Img 7 */
+		const floatingImage7 = document.getElementById('floatingImage7');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage7.style.transform = `translate(${offsetX * 20}px, ${offsetY * 20}px)`;
+		});
+
+		/* Img 8 */
+		const floatingImage8 = document.getElementById('floatingImage8');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage8.style.transform = `translate(${offsetX * 15}px, ${offsetY * 15}px)`;
+		});
+
+		/* Img 9 */
+		const floatingImage9 = document.getElementById('floatingImage9');
+
+		document.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX;
+			const mouseY = e.clientY;
+
+			// Calculate percentage offsets
+			const offsetX = (mouseX / window.innerWidth - 0.5) * 2; // Normalize to [-1, 1]
+			const offsetY = (mouseY / window.innerHeight - 0.5) * 2;
+
+			// Apply the transform
+			floatingImage9.style.transform = `translate(${offsetX * -20}px, ${offsetY * -20}px)`;
+		});
+		/* ========= INSTAGRAM FLOATING IMAGES ========= */
+	</script>-->
+
+
+
+
+
+
+</body>
+</html>

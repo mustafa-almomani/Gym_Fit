@@ -1,0 +1,31 @@
+<section class="dark">
+  <div class="container py-4">
+    <h1 style="color:lightgray" class="h1 text-center" id="pageHeaderTitle">All  Gyms</h1>
+
+   
+    <article class="postcard dark blue" *ngFor="let item of allgymArray" >
+      <a class="postcard__img_link" href="javascript:void(0)">
+        <img class="postcard__img" src="https://localhost:7072{{item.gymImage}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text">
+        <h1 class="postcard__title blue"><a href="javascript:void(0)">{{item.gymName}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt me-2"></i>Work Time : {{item.startTime}} AM - {{item.endTime}} PM
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{item.gymDescription}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item pt-2"><i class="fas fa-tag me-2"></i>The Location : {{item.gymLocation}}</li>
+          <li class="tag__item pt-2"><i class="fas fa-clock me-2"></i>Monthly subscription : {{item.price}} JOD</li>
+          
+          <li class="tag__item play blue btn btn-secondary">
+            <a routerLink="/GymDetails/{{item.gymId}}"><i class="fas fa-play me-2"></i>Subscribe Now</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>

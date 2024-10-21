@@ -1,0 +1,41 @@
+
+<div class="container" style="max-width: 80%; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: gainsboro;">
+  <hr />
+  <h2 class="text-center mb-4">Manage Orders</h2>
+  <hr />
+
+  <!-- Orders Table -->
+  <div class="table-responsive">
+    <table class="table table-hover mt-5">
+      <thead class="table-light">
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+
+          <th>Total Amount</th>
+        
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of selectedOrder">
+          <td>{{order.productname}}</td> <!-- Update to 'user' -->
+          <td>{{ order.quantity }}</td>
+
+          <td>{{ order.totalamount | currency }}</td> <!-- Update to 'totalamount' -->
+        
+
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- No Orders Message (optional if orders array is empty) -->
+  <ng-template #noOrders>
+    <div class="alert alert-warning text-center">
+      No orders found. Please add a new order.
+    </div>
+  </ng-template>
+
+</div>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.784122">
+  <PropertyGroup>
+    <StartupCommand>npm start</StartupCommand>
+    <JavaScriptTestFramework>Jasmine</JavaScriptTestFramework>
+    <!-- Allows the build (or compile) script located on package.json to run on Build -->
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+    <!-- Folder where production build objects will be placed -->
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\project_fitness.client\browser\</BuildOutputFolder>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="src\app\assets\**" />
+    <None Remove="src\Nour\**" />
+    <TypeScriptConfiguration Remove="src\app\assets\**" />
+    <TypeScriptConfiguration Remove="src\Nour\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\app\Admin\updateShop\" />
+    <Folder Include="src\app\AOQ\" />
+    <Folder Include="src\app\Services%28a,m%29\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+<hr />
+<h2 class="text-center my-4">All Customer Testimonials</h2> <!-- Title for the table -->
+<hr />
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">User name</th>
+      <th scope="col">Time sent</th>
+      <th scope="col">The message</th>
+
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Testimonial of TestimonialArray">
+      <td>{{Testimonial.username}}</td>
+      <td>{{Testimonial.date}}</td>
+      <td>{{Testimonial.messege}}</td>
+
+
+      <td>
+        <button class="btn btn-danger" (click)="deleteContactById(Testimonial.testimonialId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

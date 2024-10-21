@@ -1,0 +1,36 @@
+<svg width="1600" height="451" viewBox="0 0 1600 451" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path class='lines' d="M-1 350.447C82.6405 369.196 268.716 411.408 343.892 430.264C437.863 453.834 585.317 479.547 745.267 341.876C905.217 204.206 1280.1 -272.017 1599 215.991" stroke="url(#paint0_linear_98_248)" stroke-width="2"/>
+    <path class='lines lines2' d="M-1 99.7727C82.6928 80.9819 268.884 38.6759 344.108 19.7777C438.137 -3.84494 585.683 -29.6151 745.733 108.363C905.783 246.341 1280.9 723.626 1600 234.529" stroke="url(#paint1_linear_98_248)" stroke-width="2"/>
+    <defs>
+        <linearGradient id="paint0_linear_98_248" x1="1599" y1="354.5" x2="-0.999999" y2="354.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white" stop-opacity="0"/>
+            <stop offset="0.44046" stop-color="white"/>
+            <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_98_248" x1="183.288" y1="139.03" x2="1600" y2="139.03" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white" stop-opacity="0"/>
+            <stop offset="0.519282" stop-color="white"/>
+            <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+
+    <!-- <style>
+        .lines {
+            stroke-dasharray: 2000px;
+            stroke-dashoffset: 2000px;
+            animation: line 6s linear infinite;
+        }
+        @keyframes line {
+            0%{
+                stroke-dashoffset: 2000px;
+            }
+            50%{
+                stroke-dashoffset: 0;
+            }
+            100%{
+                stroke-dashoffset: 2000px;
+            }
+        }
+    </style> -->
+
+</svg>

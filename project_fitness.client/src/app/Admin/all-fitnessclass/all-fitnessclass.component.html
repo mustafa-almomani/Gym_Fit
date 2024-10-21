@@ -1,0 +1,36 @@
+<input type="text" [(ngModel)]="searchTerm" placeholder="Search by class name" class="form-control mb-3" />
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Fitness Class Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Location</th>
+      <th scope="col">Price</th>
+      <th scope="col">Days</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+      <th scope="col">Actions</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of filteredServicesArray()">
+      <td><img class="postcard__img" style="height:100px; width:100px;" src="https://localhost:7072{{item.fitnessClassesImage}}" alt="Image Title" /></td>
+      <td>{{item.fitnessClassesName}}</td>
+      <td>{{item.fitnessClassesDescription}}</td>
+      <td>{{item.fitnessClassesLocation}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.days}}</td>
+      <td>{{item.startTime}}</td>
+      <td>{{item.endTime}}</td>
+      <td>
+        <a routerLink="/Dashboard/editFitnessclass/{{item.fitnessClassesId}}" class="btn btn-secondary" style="color:white">Edit</a>
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteFitnessClassById(item.fitnessClassesId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,403 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+
+$main-green: #79dd09 !default;
+$main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
+$main-yellow: #bdbb49 !default;
+$main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
+$main-red: #bd150b !default;
+$main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
+$main-blue: #0076bd !default;
+$main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;*/
+/* This pen */
+/*body {
+  font-family: "Baloo 2", cursive;
+  font-size: 16px;
+  color: #ffffff;
+  text-rendering: optimizeLegibility;
+  font-weight: initial;
+}
+
+.light {
+  background: #f3f5f7;
+}
+
+a, a:hover {
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+#pageHeaderTitle {
+  margin: 2rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+}*/
+
+/* Cards */
+/*.postcard {
+  flex-wrap: wrap;
+  display: flex;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+  margin: 0 0 2rem 0;
+  overflow: hidden;
+  position: relative;
+  color: #18151f;*/ /* تعديل اللون ليتناسب مع الكاردات النهارية */
+  /*background-color: #e1e5ea;*/ /* لون الخلفية للكاردات النهارية */
+
+  /*.t-dark
+
+{
+  color: #18151f;
+}
+
+a {
+  color: inherit;
+}
+
+h1, .h1 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.small {
+  font-size: 80%;
+}
+
+.postcard__title {
+  font-size: 1.75rem;
+}
+
+.postcard__img {
+  max-height: 180px;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.postcard__img_link {
+  display: contents;
+}
+
+.postcard__bar {
+  width: 50px;
+  height: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #424242;
+  transition: width 0.2s ease;
+}
+
+.postcard__text {
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.postcard__preview-txt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  height: 100%;
+}
+
+.postcard__tagbox {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 14px;
+  margin: 20px 0 0 0;
+  padding: 0;
+  justify-content: center;
+  .tag__item
+
+{
+  display: inline-block;
+  background: rgba(83, 83, 83, 0.4);
+  border-radius: 3px;
+  padding: 2.5px 10px;
+  margin: 0 5px 5px 0;
+  cursor: default;
+  user-select: none;
+  transition: background-color 0.3s;
+  &:hover
+
+{
+  background: rgba(83, 83, 83, 0.8);
+}
+
+}
+}
+
+&:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(-70deg, #e21dfb00, #82d5ff45 50%);
+  opacity: 1;
+  border-radius: 10px;
+
+
+}
+
+&:hover .postcard__bar {
+  width: 100px;
+}
+
+@media screen and (min-width: 769px) {
+  .postcard__title {
+    font-size: 2rem;
+  }
+
+  .postcard__tagbox {
+    justify-content: start;
+  }
+
+  .postcard__img {
+    max-width: 300px;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .postcard__text {
+    padding: 3rem;
+    width: 100%;
+  }
+
+  &:hover .postcard__img {
+    transform: scale(1.1);
+  }*/
+  /*  h1.postcard__title.blue {
+    position: relative;
+    left: 38px;
+    top: 50px;
+    text-align: center;
+  }*/
+  /*.recipe-details {
+    margin-bottom: 2rem;*/ /* مسافة بين تفاصيل الوصفة */
+    /*padding: 1.5rem;*/ /* padding لخلق فراغ حول المحتوى */
+    /*border-radius: 10px;*/ /* زوايا مستديرة */
+    /*background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);*/ 
+    /*width: 70%;
+    position: relative;
+    left: 25px;
+    top: 18px;
+  }
+
+  .recipe-title {
+    font-size: 2.2rem;*/ /* حجم أكبر للعناوين */
+    /*font-weight: bold;*/ /* وزن الخط */
+    /*color: $main-blue;*/ /* لون العنوان */
+    /*text-align: center;*/ /* توسيط العنوان */
+    /*margin-bottom: 0.5rem;*/ /* مسافة أسفل العنوان */
+  /*}
+
+  .preparation-time {
+    font-size: 1.2rem;*/ /* حجم الخط للوقت */
+    /*color: #666;*/ /* لون رمادي للوقت */
+    /*text-align: center;*/ /* توسيط النص */
+    /*margin-bottom: 1rem;*/ /* مسافة أسفل الوقت */
+  /*}
+
+  .divider {
+    border: 1px solid #e0e0e0;*/ /* لون للفاصل */
+    /*margin: 1rem 0;*/ /* مسافة حول الفاصل */
+  /*}
+
+  .section-title {
+    font-weight: bold;
+    font-size: 1.8rem;*/ /* حجم أكبر للعناوين */
+    /*color: $main-blue;*/ /* لون العناوين */
+    /*margin: 1rem 0;*/ /* مسافة حول العناوين */
+  /*}
+
+  .preparation-steps {
+    list-style-type: decimal;*/ /* خطوات مرقمة */
+    /*padding-left: 20px;*/ /* مسافة للخطوات */
+    /*margin-bottom: 1rem;*/ /* مسافة أسفل الخطوات */
+  /*}
+
+  .step {
+    margin-bottom: 0.5rem;*/ /* مسافة بين الخطوات */
+    /*font-size: 1rem;*/ /* حجم خط الخطوات */
+    /*line-height: 1.5;*/ /* ارتفاع السطر للوضوح */
+  /*}
+
+  .recipe-header {
+    font-size: 2.5rem;*/ /* حجم الخط */
+    /*font-weight: bold;*/ /* وزن الخط */
+    /*color: $main-blue;*/ /* لون العنوان */
+    /*text-align: center;*/ /* توسيط العنوان */
+    /*margin: 2rem 0;*/ /* مسافة حول العنوان */
+  /*}
+}*/
+
+
+
+/* COLORS */
+/*.postcard .postcard__tagbox .green.play:hover {
+  background: $main-green;
+  color: black;
+}
+
+.green .postcard__title:hover {
+  color: $main-green;
+}
+
+.green .postcard__bar {
+  background-color: $main-green;
+}
+
+.green::before {
+  background-image: linear-gradient(-30deg, $main-green-rgb-015, transparent 50%);
+}
+
+.blue .postcard__tagbox .play:hover {
+  background: $main-blue;
+}
+
+.blue .postcard__title:hover {
+  color: $main-blue;
+}
+
+.blue .postcard__bar {
+  background-color: $main-blue;
+}
+
+.red .postcard__tagbox .play:hover {
+  background: $main-red;
+}
+
+.red .postcard__title:hover {
+  color: $main-red;
+}
+
+.red .postcard__bar {
+  background-color: $main-red;
+}
+
+.yellow .postcard__tagbox .play:hover {
+  background: $main-yellow;
+  color: black;
+}
+
+.yellow .postcard__title:hover {
+  color: $main-yellow;
+}
+
+.yellow .postcard__bar {
+  background-color: $main-yellow;
+}*/
+/* Breadcrumb Area */
+.breadcrumb-area {
+  background-color: #f8f8f8;
+  padding: 30px 0;
+  text-align: center;
+}
+
+  .breadcrumb-area h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+.breadcrumb-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+  .breadcrumb-list ul li {
+    display: inline;
+    font-size: 16px;
+    color: #999;
+  }
+
+    .breadcrumb-list ul li a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .breadcrumb-list ul li + li:before {
+      content: ">";
+      margin: 0 5px;
+      color: #999;
+    }
+
+/* Product Details Section */
+.product-details {
+  padding: 40px 0;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.product-info {
+  text-align: left;
+}
+
+  .product-info h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+.product-price {
+  font-size: 24px;
+  color: #ff5f5f;
+}
+
+  .product-price del {
+    font-size: 18px;
+    color: #999;
+    margin-left: 10px;
+  }
+
+.product-rating {
+  color: #ffcc00;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+  .product-rating span {
+    color: #888;
+    margin-left: 5px;
+  }
+
+.product-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.quantity-input {
+  width: 60px;
+  height: 45px;
+  text-align: center;
+}
+
+.btn-custom {
+  background-color: #ff5f5f;
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 10px 25px;
+  margin-left: 10px;
+}
+
+.btn-wishlist {
+  font-size: 20px;
+  color: #ff5f5f;
+  border: 1px solid #ff5f5f;
+  background: none;
+  padding: 10px;
+  margin-left: 10px;
+}

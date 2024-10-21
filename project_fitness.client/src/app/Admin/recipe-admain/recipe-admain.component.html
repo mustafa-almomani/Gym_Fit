@@ -1,0 +1,38 @@
+<hr />
+<h2>Recipes </h2>
+<hr />
+
+<div class="form-group mb-3">
+  <input type="text" class="form-control" placeholder="Search by Recipe Name" [(ngModel)]="searchTerm" (ngModelChange)="filterRecipes()">
+</div>
+
+<button class="btn btn-success mb-0" [routerLink]="['/Dashboard/AddRecipeAdmin']">Add Recipe Type</button>
+
+<table class="table table-striped table-hover text-center" style="margin-top: 20px;">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Recipe Name</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of filteredRecipeArray">
+      <td>
+        <a class="postcard__img_link">
+          <img class="postcard__img"
+               [src]="'https://localhost:7072/api/Recipe/getImages/' + item.recipeImage"
+               [alt]="item.recipeImage"
+               style="width: 100px; height: 100px;" />
+        </a>
+      </td>
+      <td>{{item.recipeName}}</td>
+
+      <td>
+        <button class="btn btn-secondary me-2" style="width: 80px;" [routerLink]="['/Dashboard/UpdateRecipeAdmin', item.recipeId]">Edit</button>
+
+        <button class="btn btn-danger" style="width: 80px;" (click)="deletrecipe(item.recipeId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

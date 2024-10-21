@@ -1,0 +1,4 @@
+.box_img {
+  filter: brightness(0.6); /* تعتيم الصورة بنسبة 40% */
+  border-radius: 23px;
+}

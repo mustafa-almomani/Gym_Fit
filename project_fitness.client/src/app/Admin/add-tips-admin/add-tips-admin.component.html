@@ -1,0 +1,33 @@
+<form #AddTips="ngForm" (ngSubmit)="AddNewTips(AddTips.value)" style="max-width: 80%; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: gainsboro;">
+  <input type="hidden" name="__RequestVerificationToken" value="TOKEN_VALUE">
+
+  <h2 style="text-align: center; margin-bottom: 20px;">Add Tips</h2>
+
+  <div class="form-container">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="tipsName" class="form-label" style="font-weight: bold;">Tips Name</label>
+        <input type="text" id="tipsName" name="tipsName" class="form-control" required="required" ngModel>
+        <span class="text-danger" id="tipsName-error" style="color: red; font-size: 0.875em;"></span>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="tipsDescription" class="form-label" style="font-weight: bold;">Tips Description</label>
+        <input type="text" id="tipsDescription" name="tipsDescription" class="form-control" required="required" ngModel>
+        <span class="text-danger" id="tipsDescription-error" style="color: red; font-size: 0.875em;"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <label for="tipsImage" class="form-label" style="font-weight: bold;">Main Image</label>
+        <input type="file" id="tipsImage" name="tipsImage" class="form-control" required="required" ngModel (change)="changeImage($event)">
+        <span class="text-danger" id="tipsImage-error" style="color: red; font-size: 0.875em;"></span>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn w-25" style="background-color: #e21dfb;">Submit</button>
+    </div>
+  </div>
+</form>

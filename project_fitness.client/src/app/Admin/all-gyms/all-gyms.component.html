@@ -1,0 +1,38 @@
+<hr />
+<h2>All Gyms</h2>
+<hr />
+<div class="form-group mb-3">
+  <input type="text" class="form-control" placeholder="Search by Service Name" [(ngModel)]="searchTerm" (ngModelChange)="filterServices()">
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Service Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Location</th>
+      <th scope="col">Price</th>
+      <th scope="col">Start Time</th>
+      <th scope="col">End Time</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of filteredServicesArray">
+      <td><img class="postcard__img" style="height:100px; width:100px;" [src]="'https://localhost:7072' + item.gymImage" alt="Image Title" /></td>
+      <td>{{item.gymName}}</td>
+      <td>{{item.gymDescription}}</td>
+      <td>{{item.gymLocation}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.startTime}}</td>
+      <td>{{item.endTime}}</td>
+      <td>
+        <a routerLink="/Dashboard/editgym/{{item.gymId}}" class="btn btn-secondary" style="color:white">Edit</a>
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteGymById(item.gymId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

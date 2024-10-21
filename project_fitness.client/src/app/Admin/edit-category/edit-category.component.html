@@ -1,0 +1,48 @@
+<form #update="ngForm" (ngSubmit)="updateServices(update.value)" class="container" style="max-width: 80%; height: 55vh; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color:gainsboro;">
+  <!-- CSRF Token (if needed) -->
+  <input type="hidden" name="__RequestVerificationToken" value="TOKEN_VALUE">
+
+  <h2 class="text-center mb-4">Update Category</h2>
+
+  <div class="row">
+    <!-- Gym Name -->
+    <div class=" mb-3">
+      <label for="Title" class="form-label">Category</label>
+      <input type="text" id="Title" name="CategoryName" class="form-control" required="required" [(ngModel)]="DetailsArray.categoryName">
+      <span class="text-danger" id="Title-error" style="color: red; font-size: 0.875em;"></span>
+    </div>
+
+    <!-- Gym Location -->
+
+  </div>
+
+  <div class="row">
+    <!-- Gym Price -->
+    <div class=" mb-3">
+      <label for="Location" class="form-label">Description</label>
+      <input type="text" id="Location" name="Description" class="form-control" required="required" [(ngModel)]="DetailsArray.description">
+      <span class="text-danger" id="Title-error" style="color: red; font-size: 0.875em;"></span>
+    </div>
+
+
+  </div>
+  <div class="row">
+   
+
+    <!-- Gym Image -->
+    <div class=" mb-3">
+      <label for="Image" class="form-label">Gym Image</label>
+      <input type="file" id="Image" name="ImageFile" class="form-control" required="required" (change)="changeImageevent($event)">
+      <span class="text-danger" id="Title-error" style="color: red; font-size: 0.875em;"></span>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Submit Button -->
+  <div class="text-center">
+    <button type="submit" class="btn w-25" style="background-color: #e955fc;">Submit</button>
+  </div>
+</form>
